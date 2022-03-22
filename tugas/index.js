@@ -108,7 +108,7 @@ app.post("/employee", (req, res) => {
 app.delete("/employee/:id", (req, res) => {
   const userId = req.params.id;
   const findIndex = employee.findIndex((val) => {
-    return (val.id = userId);
+    return val.id == userId;
   });
   if (findIndex == -1) {
     res.status(400).json({
@@ -128,7 +128,7 @@ app.patch("/employee/:id", (req, res) => {
   const userId = req.params.id;
   const data = req.body;
   const findIndex = employee.findIndex((val) => {
-    return (val.id = userId);
+    return val.id == userId;
   });
   if (findIndex == -1) {
     res.status(400).json({
@@ -140,6 +140,9 @@ app.patch("/employee/:id", (req, res) => {
     ...employee[findIndex],
     ...data,
   };
+  res.status(200).json({
+      message: `User edited`
+  })
 });
 
 app.listen(PORT, () => {
