@@ -1,5 +1,5 @@
 const employeeRoutes = require("./employees");
-const authRoutes = require("./auth");
+const authRoutes = require("./auths");
 const postRoutes = require("./posts")
 
 module.exports = {
