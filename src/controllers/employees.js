@@ -133,9 +133,9 @@ const employeeControllers = {
 
       if (findIndex == -1) {
         res.status(404).json({
-          message: "Employee not found",
+          message: `Employee with id number ${arrOfId[i]} not found`,
         });
-        return;
+        continue;
       } else {
         employeeDB.splice(findIndex, 1);
       }

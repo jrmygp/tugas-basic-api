@@ -1,7 +1,7 @@
 const { userDB } = require("../database");
 const { nanoid } = require("nanoid")
 
-const authController = {
+const authControllers = {
   registerUser: (req, res) => {
     const newUserData = req.body;
 
@@ -60,4 +60,4 @@ const authController = {
   }
 }
 
-module.exports = authController
+module.exports = authControllers

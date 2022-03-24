@@ -1,10 +1,10 @@
-const authController = require("./auth");
+const authControllers = require("./auths");
 const employeeControllers = require("./employees");
 const postControllers = require("./posts")
 
 
 module.exports = {
   employeeControllers,
-  authController,
+  authControllers,
   postControllers
 }
